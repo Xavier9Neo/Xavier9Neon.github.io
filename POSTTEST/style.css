@@ -1,0 +1,619 @@
+:root {
+    --textp: rgb(3, 3, 3);
+    --title: black;
+    --ikon: white;
+    --navigasi: black;
+    --background-color: #FFF3DA;
+    --borderTop: #E5E0FF;
+    --cover: #c7a3fc;
+    --footer: #a2a7cd;
+    --button: #7f9def;
+}
+  .dark-theme{
+    --textp: rgb(252, 252, 253);
+    --title: rgb(249, 249, 251);
+    --ikon: rgb(0, 0, 0);
+    --navigasi: white;
+    --background-color: #434553;
+    --borderTop: rgb(1, 1, 1); 
+    --cover: #b78ef4;
+    --footer: #f9f8f5;
+    --button: #5881f4;
+    --kotak: rgb(79, 87, 238)
+    min-height: 100vh;
+  }
+
+  .light-theme{
+    --textp: rgb(3, 3, 3);
+    --title: black;
+    --ikon: white;
+    --navigasi: black;
+    --background-color: #FFF3DA;
+    --borderTop: #E5E0FF;
+    --cover: #c7a3fc;
+    --footer: #535fb9;
+    --button: #7f9def;
+    --kotak: rgb(230, 24, 24)
+    min-height: 100vh;
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+  }
+
+  #icon{
+    width: 30px;
+    cursor: pointer;
+
+    /* height: 30px; */
+  }
+
+
+  html {
+    scroll-behavior: smooth;
+    font-size: 60%;
+    scroll-padding-top: 5rem;
+    overflow-x: hidden;
+    background-color: var(--background-color);
+  }
+  
+  section {
+    /* padding: 3rem 9%; */
+    padding-top: 8rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background-color: var(--background-color);
+  }
+  .ptr {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background:var(--button);
+    color: #426ada;
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+  }
+/* Definisikan gaya tombol */
+.color-change-button {
+    background-color: var(--button); /* Warna awal */
+    color: #426ada;
+}
+  .ptr:hover {
+    background-color: #95aff6;
+    border-radius: 50px;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--background-color);
+    padding: 2rem 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2); 
+  }
+  
+  header .logo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+  }
+  
+  header .navigasi a {
+    font-size: 1.5rem;
+    padding: 0 2rem;
+    color: #53679c;
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px 0px var(--background-color);
+  }
+  
+  header .navigasi a:hover {
+    color: var(--navigasi);
+    background-color: var(--footer);
+    border-radius: 20px;
+    transition: .5s ease-in-out;
+  }
+  
+  header .ikon a {
+    font-size: 2rem;
+    color: var(--title);
+    margin-left: 2.5rem;
+  }
+  
+  header .ikon a:hover {
+    color: var(--ikon);
+  }
+  
+  .Home {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    /* background-color: var(--background-color); */
+    width: 100%;
+    height: 100%;
+
+  }
+  
+  .Home img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .Home .content {
+    max-width: 50rem;
+    position: absolute;
+    color: #4b3a07;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 90px;
+    margin-top: 165px;
+    /* background-color: var(--background-color); */
+  }
+  
+  .Home .content h4 {
+    font-size: 3rem;
+    color: var(--title);
+  }
+  
+  .Home .content span {
+    font-size: 3rem;
+    color: var(--textp);
+    padding: 1rem 0;
+    line-height: 1.5;
+  }
+  
+  .Home .content p {
+    font-size: 2rem;
+    color: var(--textp);
+    padding: 1rem 0;
+    line-height: 1.5;
+  }
+/*   
+  h1 {
+    display: flex;
+    align-items: center;
+    font-size: 5rem;
+    padding: 1rem;
+    margin: 4rem;
+    background-color: #E5E0FF;
+    width: 100%;
+
+  } */
+  
+  
+  .AboutMe .row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+  }
+  
+  .AboutMe .row .biodata {
+    flex: 1 1 40rem;
+    position: relative;
+  }
+  
+  .AboutMe .row .biodata img {
+    width: 100%;
+    border: 1.5rem solid #8EA7E9; /* Menambahkan border solid */
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem #8ca8f3;
+  }
+  
+  .AboutMe .row .biodata p {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    padding: 1rem;
+    margin: 1rem;
+    color:var(--textp);
+  }
+  
+  .Fashion {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 350px 350px 350px 350px;
+    gap: 5px;
+    /* flex-wrap: wrap; */
+    /* overflow-x: auto; */
+  }
+  
+  .Fashion .fasss {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    grid-template-areas: "a b c d";
+    /* flex-wrap: nowrap; */
+    margin: 5px;
+    grid-gap: 1.5rem;
+  }
+  
+  .Fashion .sion {
+    width: 450px;
+    height: 550px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color:var(--cover);
+    border-radius: 30px; 
+    box-shadow: 10px 10px 5px 0px rgba(72, 75, 76, 0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(72, 75, 76, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(72, 75, 76, 0.75);
+  }
+  
+  .Fashion .sion h5 {
+    font-size: 14px;
+  }
+  
+  .Fashion .sion img {
+    height: 70%;
+    width: 90%;
+    padding: 2px;
+  }
+  
+  .Fashion .sion p {
+    color: black;
+    font-size: 12px;
+    line-height: 2.5;
+  }
+  #hati{
+    size: 12px;
+  }
+
+.footer{
+  background-color: var(--background-color);
+}
+.footer .boxout{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.footer .boxout .box{
+  flex: 1 1 25rem;
+}
+.footer .boxout .box h3{
+  font-size: 2.5rem;
+  color: var(--footer);
+  padding: 1rem 0;
+}
+.footer .boxout .box a{
+  display: block;
+  color:var(--footer);
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+.footer .boxout .box i{
+  display: block;
+  color: var(--textp);
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+.footer .boxout .box a:hover{
+  color:var(--kotak);
+  text-decoration: underline;
+}
+/* bagian php */
+.signin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--background-color);
+}
+/* .signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--background-color);
+} */
+
+.form {
+  display : flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 90vh;
+  background-color: var(--background-color);
+}
+
+.box {
+  /* background: var(--secondary-color); */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 25px;
+  border-radius: 20px;
+  box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+              0 0 32px 64px -48px rgba(0,0,0,0.5);
+}
+
+.form-box {
+  width: 450px;
+  margin: 0px 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-box header{
+  font-size: 35px;
+  font-weight: 600;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #fce8e8;
+  margin-bottom: 10px;
+}
+
+.form-box .field {
+  display: flex;
+  margin-bottom: 10px;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--textp);
+}
+
+.form-box .input input {
+  height: 40px;
+  width: 100%;
+  font-size: 20px;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid #f1e7e7;
+  outline: none;
+  color: black;
+}
+
+.btn {
+  height: 35px;
+  background: var(--button);
+  border: 0;
+  border-radius: 5px;
+  color: var(--background-color);
+  font-size: 15px;
+  cursor: pointer;
+  transition: all .3s;
+  margin-top: 10px;
+  padding: 0px 10px;
+}
+
+.btn:hover {
+  opacity: 0.82;
+}
+
+.submit {
+  width: 100%;
+}
+
+.links {
+  margin-bottom: 15px;
+  color: var(--textp);
+
+}
+.links a{
+  color: #426ada;
+}
+
+table, th, td {
+  border: 2px solid;
+  border-collapse: collapse;
+  width: 1520px;
+  height: 50px;
+  font-size: 15px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+th{
+  background-color: rgb(201, 194, 90);
+}
+.tambah{
+  font-size: 20px;
+}
+.kembali{
+  font-size: 20px;
+}
+.dash-main {
+  width: auto;
+  margin: 16px;
+  padding: 15px;
+  border-radius: 16px;
+  background-color: rgb(244, 222, 155);
+}
+a {
+  color: var(--navbar-color);
+  padding: 10px 16px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+}
+a:hover{
+  background-color: var(--kotak);
+}
+
+.update-content {
+  height: 100vh;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.update-form-container {
+  background-color: var(--support-color);
+  padding: 30px;
+  border-radius: 15px;
+  width: 400px; /* Sesuaikan dengan lebar yang Anda inginkan */
+  text-align: left;
+}
+
+.update-form-container h1 {
+  font-size: 24px;
+  text-align: center;
+}
+
+.update-form-container hr {
+  border: 2px solid var(--card-color);
+  margin-bottom: 24px;
+}
+
+.update-form-container form {
+  display: flex;
+  flex-direction: column;
+}
+  
+  @media (max-width: 990px) {
+    html {
+      font-size: 55%;
+    }
+    header {
+      padding: 2rem;
+    }
+    section {
+      padding: 2rem;
+    }
+    .Home {
+      background-position: left;
+    }
+    table, th, td {
+      border: 2px solid;
+      border-collapse: collapse;
+      width: 1520px;
+      height: 50px;
+      font-size: 15px;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 760px) {
+    header .navigasi {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: var(--background-color);
+      border-top: .1rem solid darkturquoise;
+    }
+    header .navigasi a {
+      margin: 1.5rem;
+      padding: 1.5rem;
+      background:var(--background-color);
+      border: .1rem solid darkcyan;
+      display: block;
+    }
+    table, th, td {
+      border: 2px solid;
+      border-collapse: collapse;
+      width: 1520px;
+      height: 50px;
+      font-size: 15px;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 450px) {
+    html {
+      font-size: 50%;
+    }
+    section {
+      /* padding: 3rem 9%; */
+      padding-top: 5rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      background-color: var(--background-color);
+    }
+    .ptr {
+      display: inline-block;
+      margin-top: 1rem;
+      border-radius: 5rem;
+      background: #7f9def;
+      color: #5a7ad4;
+      padding: .5rem 1.5rem;
+      cursor: pointer;
+      font-size: 1.4rem;
+    }
+    
+    .ptr:hover {
+      background-color: #95aff6;
+      border-radius: 30px;
+    }
+    .Home .content {
+      max-width: 10rem;
+      position: absolute;
+      color: #4b3a07;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin-left: 30px;
+      margin-top: 80px;
+      /* background-color: var(--background-color); */
+    }
+    .Home .content h4 {
+      font-size: 1rem;
+      color: var(--title);
+    }
+    
+    .Home .content span {
+      font-size: 1rem;
+      color: var(--textp);
+      padding: 1rem 0;
+      line-height: 1;
+    }
+    
+    .Home .content p {
+      font-size: 1rem;
+      color: var(--textp);
+      padding: 0;
+      line-height: 1;
+    }
+    .Fashion .sion h5 {
+      font-size: 50%;
+    }
+    
+    .Fashion .sion img {
+      height: 30%;
+      width: 30%;
+      padding: 2px;
+    }
+    
+    .Fashion .sion p {
+      color: black;
+      font-size: 35%;
+      line-height: 2.5;
+    }
+    table, th, td {
+      border: 2px solid;
+      border-collapse: collapse;
+      width: 1520px;
+      height: 50px;
+      font-size: 15px;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+  
